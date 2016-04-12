@@ -6,9 +6,6 @@
   "directories": {
     "test": "test"
   },
-  "bin": {
-    "tcp": "./bin/tcp"
-  },
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha"
   },
