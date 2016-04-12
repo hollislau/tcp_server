@@ -1,0 +1,25 @@
+{
+  "name": "tcp_server",
+  "version": "0.1.0",
+  "description": "A simple TCP server",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "bin": {
+    "tcp": "./bin/tcp"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hollislau/tcp_server.git"
+  },
+  "author": "hollislau@hotmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hollislau/tcp_server/issues"
+  },
+  "homepage": "https://github.com/hollislau/tcp_server#readme",
+}
