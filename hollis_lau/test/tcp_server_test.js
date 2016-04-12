@@ -9,7 +9,11 @@ describe("server", () => {
     numFiles = fs.readdirSync(__dirname + "/../logs").length;
   });
   it("should log requests to a file", (done) => {
-    net.connect({ port: 3000 }, () => {
+    var client = net.connect({ port: 3000 }, () => {
+      client.write("Tests ftw!\n");
+      client.end();
+    });
+    client.on("end", () => {
       var numFilesAfter = fs.readdirSync(__dirname + "/../logs").length;
       expect(numFilesAfter).to.eql(numFiles + 1);
       done();
