@@ -1,7 +1,7 @@
 const net = require("net");
 const fs = require("fs");
 
-const server = net.createServer((socket) => {
+const server = module.exports = net.createServer((socket) => {
   var file = new Date();
   var writeOut = fs.createWriteStream(__dirname + "/../logs/" + file);
 
