@@ -3,7 +3,7 @@ const fs = require("fs");
 
 var server = net.createServer((socket) => {
   var ct = new Date();
-  var log = fs.createWriteStream(__dirname + "/../logs/" + ct);
+  var log = fs.createWriteStream(__dirname + "/logs/" + ct);
 
   socket.pipe(log);
   socket.on("data", () => {

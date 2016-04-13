@@ -1,7 +1,7 @@
 const net = require("net");
 const fs = require("fs");
 const expect = require("chai").expect;
-require(__dirname + "/../lib/tcp_server.js");
+require(__dirname + "/../tcp_server.js");
 
 describe("log server", () => {
   it("should log to a file", (done) => {

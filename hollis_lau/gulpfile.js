@@ -21,7 +21,7 @@ gulp.task("test", () => {
 
 gulp.task("watch", () => {
   gulp.watch(files, ["lint"]);
-  gulp.watch("./lib/tcp_server.js", ["test"]);
+  gulp.watch("./tcp_server.js", ["test"]);
 });
 
 gulp.task("default", ["lint", "test", "watch"]);
