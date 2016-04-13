@@ -1,11 +1,15 @@
 const net = require("net");
 const fs = require("fs");
 
-const server = module.exports = net.createServer((socket) => {
-  var file = new Date();
-  var writeOut = fs.createWriteStream(__dirname + "/../logs/" + file);
+var server = net.createServer((socket) => {
+  var ct = new Date();
+  var log = fs.createWriteStream(__dirname + "/../logs/" + ct);
 
-  socket.pipe(writeOut);
+  socket.pipe(log);
+  socket.on("data", () => {
+    socket.write("" + ct);
+    socket.end();
+  });
 });
 
 server.listen(3000, () => {
